@@ -15,7 +15,6 @@ const StyledText = styled.div`
   font-family: ${FONTFAMILY.ROBOTO};
   ${TEXT.L}
   @media screen and (max-width: ${BREAKPOINT.MEDIUM}) {
-    font-family: ${FONTFAMILY.NOTO_SANS};
     ${TEXT.M}
   }
 `;
