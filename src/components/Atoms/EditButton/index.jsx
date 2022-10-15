@@ -27,6 +27,7 @@ const StyledButton = styled.button`
   padding: 0px;
   border: none;
   background: transparent;
+  cursor: pointer;
   &:hover > ${CircleHover} {
     opacity: 0.2;
   }
