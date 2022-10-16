@@ -21,9 +21,9 @@ const TaskbtnHover = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 100%;
+  height: 100%;
   transform: translate(-50%, -50%);
-  width: 126px;
-  height: 24px;
   background-color: ${COLOR.GREEN};
   opacity: 0;
   border-radius: 12px;
