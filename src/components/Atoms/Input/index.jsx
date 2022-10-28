@@ -29,6 +29,7 @@ const StyledInput = styled.input`
   color: ${COLOR.LIGHT_GRAY};
   ${TEXT.S}
   padding: 0px 4px;
+  outline: none;
   border: none;
   background-color: ${COLOR.BLACK};
   overflow: hidden;
