@@ -21,23 +21,20 @@ const Task = ({
   return (
     <StyledTask>
       <Checkbox onClick={onTaskComplete} />
-      <>
-        {isEditing && (
-          <Input
-            defaultValue={taskName}
-            onEditComplete={(name) => {
-              onEditComplete(name);
-              setIsEditing(false);
-            }}
-          />
-        )}
-        {!isEditing && (
-          <>
-            <StyledTaskText>{taskName}</StyledTaskText>
-            <EditButton onClick={handleEditState} />
-          </>
-        )}
-      </>
+      {isEditing ? (
+        <Input
+          defaultValue={taskName}
+          onEditComplete={(name) => {
+            onEditComplete(name);
+            setIsEditing(false);
+          }}
+        />
+      ) : (
+        <>
+          <StyledTaskText>{taskName}</StyledTaskText>
+          <EditButton onClick={handleEditState} />
+        </>
+      )}
     </StyledTask>
   );
 };
