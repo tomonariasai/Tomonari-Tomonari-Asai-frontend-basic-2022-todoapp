@@ -30,6 +30,7 @@ const TaskbtnHover = styled.div`
 `;
 
 const StyledTaskButton = styled.button`
+  width: 126px;
   position: relative;
   background: transparent;
   padding: 2px 6px;
