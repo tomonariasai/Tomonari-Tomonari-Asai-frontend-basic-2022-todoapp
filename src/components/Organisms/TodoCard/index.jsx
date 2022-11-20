@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import COLOR from "../../../variables/color";
-import TEXT from "../../../variables/texts";
 import styled from "styled-components";
 import AddTaskButton from "../../Atoms/AddTaskButton/index.jsx";
 import Task from "../../Molecules/Task/index.jsx";
@@ -21,6 +20,7 @@ const TodoCard = () => {
     if (name === "") {
       edittaskList.splice(index, 1);
       settaskList(edittaskList);
+      return;
     }
     edittaskList[index].taskName = name;
     settaskList(edittaskList);
