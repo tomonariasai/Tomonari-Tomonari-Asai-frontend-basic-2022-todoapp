@@ -3,8 +3,11 @@ import COLOR from "../../../variables/color";
 import styled from "styled-components";
 import AddTaskButton from "../../Atoms/AddTaskButton/index.jsx";
 import Task from "../../Molecules/Task/index.jsx";
+import { useAlertHandlerContext } from "../../../contexts/alert_handler";
 
 const TodoCard = () => {
+  const AlertHandlerContext = useAlertHandlerContext();
+
   const [taskList, settaskList] = useState([]);
 
   useEffect(() => {
@@ -36,6 +39,7 @@ const TodoCard = () => {
     if (name === "") {
       edittaskList.splice(index, 1);
       settaskList(edittaskList);
+      AlertHandlerContext.setAlert("タスクの名前が設定されていません。");
       return;
     }
     edittaskList[index].taskName = name;
