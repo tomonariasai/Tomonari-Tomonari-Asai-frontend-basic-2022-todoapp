@@ -28,4 +28,6 @@ const StyledAlert = styled.div`
 const StyledalertText = styled.div`
   color: ${COLOR.WHITE};
   ${TEXT.S}
+  @media screen and (max-width: ${BREAKPOINT.MEDIUM}) {
+  }
 `;
